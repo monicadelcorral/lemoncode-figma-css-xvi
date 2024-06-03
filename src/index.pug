@@ -1,0 +1,18 @@
+extends _html/_layouts/layout_default
+block append vars
+  - var classesBody = 'home';
+  - var head_title = '';
+  - var userLogged = false;
+  - var currentPage = 0;
+block content
+  include _html/_modules/hero
+  include _html/_modules/content-image
+
+
+  +hero("Get more statistics about your business", "We bring the advantages of measure now solutions to the market by offering attractive new statistics tools.", "Get started now", "Meet Firebomb")
+
+  +content-image("Get more statistics about your business", "We bring the advantages of measure now solutions to the market by offering attractive new statistics tools. We bring the advantages of measure now solutions to the market by offering attractive new statistics tools.", "Click me", "Stats")
+  +content-image("Get more statistics about your business", "We bring the advantages of measure now solutions to the market by offering attractive new statistics tools. We bring the advantages of measure now solutions to the market by offering attractive new statistics tools.", "Click me", "Stats")
+  +content-image("Get more statistics about your business", "We bring the advantages of measure now solutions to the market by offering attractive new statistics tools. We bring the advantages of measure now solutions to the market by offering attractive new statistics tools.", "Click me", "Stats", "_assets/illustration-2.svg", true, true)
+
+

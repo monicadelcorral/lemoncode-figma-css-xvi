@@ -1,0 +1,151 @@
+//----------------------------------------//
+//                                        //
+//  Mixins                                //
+//                                        //
+//----------------------------------------//
+
+//Clearfix
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+
+// Screen Reader Text
+
+@mixin screen-reader-text() {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+
+// Img adjustables
+
+@mixin img-fit($fit: cover, $position: center center, $width: 100%) {
+	img {
+		width: $width;
+		height: 100%;
+		object-fit: $fit;
+		object-position: $position;
+		display: block;
+	}
+	&.compat-object-fit {
+		background-size: $fit;
+		background-repeat: no-repeat;
+		background-position: $position;
+		img {
+			visibility: hidden;
+		}
+	}
+}
+
+// Aspect Ratio
+
+@mixin aspect-ratio($width, $height) {
+	height: 0;
+	padding: 0;
+	padding-top: math.div($height, $width) * 100%;
+	position: relative;
+	& > * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+}
+
+
+//
+// Prefixed styles fot placehoders
+//
+// Usage:
+// .selector {
+//   @include placeholder {
+//     font-style:italic;
+//     color: white;
+//     font-weight:100;
+//   }
+// }
+///
+
+@mixin optional-at-root($sel) {
+	@at-root #{if(not &, $sel, selector-append(&, $sel))} {
+		@content;
+	}
+}
+
+@mixin placeholder {
+	@include optional-at-root('::-webkit-input-placeholder') {
+	 @content;
+	}
+	@include optional-at-root(':-moz-placeholder') {
+	 @content;
+	}
+	@include optional-at-root('::-moz-placeholder') {
+	 @content;
+	}
+	@include optional-at-root(':-ms-input-placeholder') {
+	 @content;
+	}
+	@include optional-at-root('::placeholder ') {
+	 @content;
+	}
+
+}
+
+// Mixin layout
+
+@mixin layout() {
+  padding: 0 $layout_space;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $layout_max_width;
+  position: relative;
+
+  @media (max-width: $mq_max_large_tablet) {
+		padding-left: $layout_space_tablet;
+    padding-right: $layout_space_tablet;
+  }
+
+  @media (max-width: $mq_max_large_phone) {
+    padding-left: $layout_space_mobile;
+    padding-right: $layout_space_mobile;
+  }
+}
+
+// Scrollable
+
+@mixin scrollable($x: hidden, $y: auto, $thumb: $color_1, $bg: $color_2) {
+	overflow: hidden;
+	overflow-x: $x;
+	overflow-y: $y;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-color: $thumb $bg;
+	scrollbar-width: thin;
+  
+	&::-webkit-scrollbar {
+	  width: 6px;
+	}
+  
+	&::-webkit-scrollbar-track {
+	  background: transparent;
+	}
+  
+	&::-webkit-scrollbar-thumb {
+	  background-color: $thumb;
+	  border-radius: 20px;
+	}
+}

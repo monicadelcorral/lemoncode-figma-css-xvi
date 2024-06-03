@@ -1,0 +1,108 @@
+//----------------------------------------//
+//                                        //
+//  Text Hierarchies                      //
+//                                        //
+//----------------------------------------//
+
+@mixin text--body() {
+  font-family: $font_family_1;
+  font-size: $text_size_default;
+  line-height: $text_lineheight_default;
+  font-weight: $text_weight_default;
+  color: var(--color-body-text);
+}
+
+@mixin text--body-small() {
+  font-size: var(--font-size-small);
+  line-height: 1.14em;
+}
+
+// Titles
+
+@mixin text-hierarchy--1() {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.1667em;
+  margin: 0 0 1rem 0;
+  color: var(--color-title);
+}
+
+@mixin text-hierarchy--2() {
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 1.25em;
+  margin: 0 0 1rem 0;
+  color: var(--color-title);
+}
+
+@mixin text-hierarchy--3() {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.333em;
+  margin: 0 0 1rem 0;
+}
+
+@mixin text-hierarchy--4() {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 0 0 1rem 0;
+}
+
+@mixin text-hierarchy--5() {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  margin: 0 0 1rem 0;
+  color: var(--color-title);
+}
+
+
+@mixin text--button() {
+  font-family: $font_family_1;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.3em;
+  letter-spacing: 0.2px;
+}
+
+@mixin text--badge() {
+  @include text--body-small();
+  text-transform: uppercase;
+}
+
+
+
+
+@mixin text--input() {
+  font-family: $font_family_1;
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+@mixin text--input-placeholder() {
+  font-weight: 400;
+}
+
+
+.title--1 {
+  @include text-hierarchy--1();
+}
+
+.title--2 {
+  @include text-hierarchy--2();
+}
+
+.title--3 {
+  @include text-hierarchy--3();
+}
+
+.title--4 {
+  @include text-hierarchy--4();
+}
+
+.title--5 {
+  @include text-hierarchy--5();
+}
+

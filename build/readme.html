@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+
+<h1 id="lemoncode-masterxvi">Lemoncode - Master XVI</h1>
+
+<h2 id="defigmaacss">De Figma a CSS</h2>
+
+<h2 id="autora:mónicadelcorral.wildÔom.">Autora: Mónica del Corral. WILDÔOM.</h2>
+
+<hr />
+
+<h2 id="pugtohtml">Pug to HTML</h2>
+
+<p>Este proyecto utiliza Pug como template engine para HTML. Esto lo suelo usar sólo en proyectos de maquetación sin integración, es decir, cuando el resultado final debe ser un HTML estático (bien porque lo integra otro equipo o porque es un sitio tan pequeño que no tiene CMS). Es muy útil para ahorrar tiempo en loops y condicionales, pero mi consejo es que para empezar os acostumbréis al HTML estándar.
+https://www.npmjs.com/package/pug</p>
+
+<h2 id="cuestionesaplantearseenesteproyecto">Cuestiones a plantearse en este proyecto</h2>
+
+<h3 id="variablesdetexto">Variables de texto</h3>
+
+<p>¿Merece la pena crear y pasar las variables de texto desde config.scss a text.scss? Y así crear un text.scss más reutilizable.
+Pasar de esto:</p>
+
+<pre><code>@mixin text-hierarchy--1() {
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.1667em;
+  margin: 0 0 1rem 0;
+  color: var(--color-title);
+}
+</code></pre>
+
+<p>a esto:</p>
+
+<pre><code>@mixin text-hierarchy--1() {
+  font-weight: var(--text-hierarchy-1-font-weight);
+  font-size: var(--text-hierarchy-1-font-size);
+  line-height: var(--text-hierarchy-1-line-height);
+  margin: var(--text-hierarchy-1-margin);
+  color: var(--color-title);
+}
+</code></pre>
+
+<p>Y dichas variables añadirlas a config.scss</p>
+
+<h3 id="jerarquíasdetextodeunproyecto">Jerarquías de texto de un proyecto</h3>
+
+<p>No todos los proyectos tienen las mismas jerarquías pero casi todos los proyectos se pueden resolver con:</p>
+
+<ul>
+<li>5 jerarquías de título</li>
+<li>1 jerarquía de body</li>
+<li>1 jerarquía de body pequeño</li>
+<li>1 jerarquía de body grande</li>
+<li>1 jerarquía de navegación</li>
+<li>1 jerarquía de botón</li>
+</ul>
+
+<p>Aunque puede haber otras como:</p>
+
+<ul>
+<li>1 jerarquía de input</li>
+<li>1 jerarquía de tag, badge, etc. (Muchas vecces es la jerarquía de body pequeño pero no tiene por qué)</li>
+</ul>
+
+<p>Esto significa que hay que tener en cuenta que text.scss puede ser mucho más flexbile con variables pero no será infalible para cualquier proyecto y tendremos que editarlo y adecuarlo a las necesidades.</p>
+
+<h3 id="usodevariablessass">Uso de variables SASS</h3>
+
+<p>¿A estas alturas merece la pena el uso de variables SASS si vamos a utilizar variables CSS?
+Si el proyecto es pequeño, seguramente nos valgan las variables SASS, que se compilan en un CSS que lee el navegador (el navegador no llega a saber si eso eran o no variables SASS). Pero si el proyecto requiere por ejemplo un light/dark mode, entonces por muy pequeño que sea, nos será útil tener variables CSS (ojo, se puede hacer con SASS también pero requiere más código y será menos escalable).</p>
+
+<p>Si queremos usar un loop dentro del código, por ejemplo, darle un background-color más claro a partir del color base según el index del elemento, nos será útil tenerlo en variable SASS:</p>
+
+<pre><code>$base-color: #036;
+
+ul {
+  @for $i from 1 through 5 {
+    li:nth-child(#{$i}) {
+      background-color: lighten($base-color, $i * 5%);
+    }
+  }
+}
+</code></pre>
+
+</body>
+</html>
+

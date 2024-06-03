@@ -1,0 +1,116 @@
+//----------------------------------------//
+//                                        //
+//  Styles config                         //
+//                                        //
+//----------------------------------------//
+
+
+// Media Query ranges
+
+$mq_min_large_desktop: 1340px;
+$mq_min_small_desktop: 1100px;
+$mq_min_large_tablet: 980px;
+$mq_min_small_tablet: 767px;
+$mq_min_large_phone: 520px;
+$mq_min_small_phone: 360px;
+$mq_min_smallest_phone: 330px;
+
+$mq_max_small_desktop: $mq_min_large_desktop - 1;
+$mq_max_large_tablet: $mq_min_small_desktop - 1;
+$mq_max_medium_tablet: $mq_min_large_tablet - 1;
+$mq_max_large_phone: $mq_min_small_tablet - 1;
+$mq_max_small_phone: $mq_min_large_phone - 1;
+$mq_max_smallest_phone: $mq_min_small_phone - 1;
+$mq_max_smallest_phone: $mq_min_smallest_phone - 1;
+
+
+// Layout dimensions
+
+$layout_max_width: 1440px;
+
+$layout_space : 6.875rem;
+$layout_space_tablet : 2rem;
+$layout_space_mobile : 1rem;
+
+// Module dimensions
+
+$module_space: 5rem;
+$module_space_tablet : 4rem;
+
+// Round corners
+
+$badge_corner : 0.25rem;
+$button_corner : 0.375rem;
+
+// Fonts
+
+$font_family_1: 'Inter', sans-serif;
+$font_family_2: 'Work Sans', sans-serif;
+
+// Text size
+
+$text_size_default: 1rem;
+$text_weight_default: 500;
+$text_weight_bold_default: 700;
+$text_lineheight_default : 1.285; //em
+
+// Colors
+
+$body_background: #ffffff;
+
+$color_1 : #ffffff;
+$color_1_fadeout : fade-out($color_1, .1);
+
+$color_primary_100 : #090330;
+$color_primary_300 : #1A0A8F;
+$color_primary_500 : #2C10EF;
+$color_primary_700 : #8070F5;
+$color_primary_900 : #D5CFFC;
+
+$color_ink_100 : #19181B;
+$color_ink_300 : #4A4950;
+$color_ink_500 : #7B7986;
+$color_ink_700 : #B0AFB6;
+$color_ink_900 : #E5E4E7;
+
+$gradient_1 : linear-gradient(109.15deg, $color_primary_500 0%, #7562F4 31.77%, #8E7EF6 50.52%, #7462F4 68.75%, #4128F0 100%);
+
+:root {
+
+    --color-accent : #2C10EF;
+    --color-accent-negative : #{$color_1};
+
+    --color-accent-2 : #{$color_primary_700};
+    --color-accent-2-negative : #{$color_1};
+    
+    --color-accent-3 : #{$color_primary_300};
+    --color-accent-3-negative : #{$color_1};
+
+    --color-text : #{$color_primary_100};
+    --color-text-2 : #{$color_ink_100};
+    --color-text-negative : #{$body_background};
+
+
+    --color-body-background : var(--color-text-negative);
+    --color-body-text : var(--color-text);
+
+    --button-color-background : var(--color-accent);
+    --button-color-text : var(--color-accent-negative);
+
+    --button-hover-color-background:  var(--color-accent-3);
+    --button-hover-color-text : var(--color-accent-3-negative);
+
+    --button-secondary-color-background : var(--color-accent-negative);
+    --button-secondary-color-text : var(--color-accent);
+
+    --button-tertiary-color-background : var(--color-accent-2);
+    --button-tertiary-color-text : var(--color-accent-2-negative);
+
+    --module-color-background: var(--color-accent-2);
+    --module-gradient-background: #{$gradient_1};
+
+    --color-title: var(--color-text-2);
+
+    --font-size-small: .875rem;
+
+}

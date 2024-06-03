@@ -1,0 +1,116 @@
+//----------------------------------------//
+//                                        //
+//  Hero stylesheet                       //
+//                                        //
+//----------------------------------------//
+
+.hero {
+    --color-title: var(--color-text-negative);
+    
+    padding: $module_space 0;
+    background-color: var(--module-color-background);
+    background-image: var(--module-gradient-background);
+    background: url(../_gfx/image.jpg) center center no-repeat;
+    background-size: cover;
+    color: $color_1;
+    position: relative;
+
+    &__inner {
+        @include layout();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__body {
+        width: calc(100% - 34rem);
+        padding-right: 3rem;
+
+        &__title {
+            @include text-hierarchy--1();
+
+            & + .button {
+                margin-top: 2rem;
+            }
+        }
+
+        &__content {
+            @include text-hierarchy--3();
+            margin-bottom: 3rem;
+
+            p {
+                margin: 0 0 .5rem 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .badge {
+            @include badge-dark();
+        }
+
+        .button {
+            @include button-secondary();
+        }
+    }
+
+    &__media {
+        width: 34rem;
+        margin-right: -2rem;
+        position: relative;
+        padding: 4rem;
+        
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            position: relative;
+            z-index: 10;
+        }
+        
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background: url(../_gfx/hero-below.svg) center center no-repeat;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-size: contain;
+        }
+    }
+
+    // Background curve
+
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 313px;
+        background: url(../_gfx/hero-bottom-2.svg) center bottom no-repeat;
+        background-size: 100% auto;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        pointer-events: none;
+    }
+
+    /*&::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $color_primary_500;
+        position: absolute;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+        opacity: .5;
+    }*/
+}

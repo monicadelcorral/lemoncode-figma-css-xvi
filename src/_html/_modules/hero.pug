@@ -1,0 +1,24 @@
+mixin hero(title, text, button, badge, img)
+  - title = (typeof title !== 'undefined') ? title : "Lorem ipsum dolor est"
+  - text = (typeof text !== 'undefined') ? text : "Fusce maximus sem et nisl vehicula fermentum. Praesent tempor enim sed lobortis laoreet. Nam a justo placerat, elementum purus ut, facilisis nunc. "
+  - button = (typeof button !== 'undefined') ? button : false;
+  - badge = (typeof badge !== 'undefined') ? badge : false;
+  - img = (typeof img !== 'undefined') ? img : "_assets/illustration-1.svg";
+  //- img = (typeof img !== 'undefined') ? img : "_assets/hero-above.png";
+  
+  section.hero
+    .hero__inner 
+
+        .hero__body 
+            if (badge)
+                span.badge
+                    span.badge__text #{badge}
+            h1.hero__body__title #{title}
+            .hero__body__content 
+                p #{text}
+            if (button)
+                a(href="#").button
+                    span.button__text #{button}
+        .hero__media 
+            img(src=img)
+   

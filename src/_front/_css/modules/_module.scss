@@ -1,0 +1,49 @@
+//----------------------------------------//
+//                                        //
+//  Module general stylesheet             //
+//                                        //
+//----------------------------------------//
+
+.module {
+    padding: $module_space 0;
+
+    @media (max-width: $mq_max_large_tablet) {
+        padding-top: $module_space_tablet;
+        padding-bottom: $module_space_tablet;
+    }
+    
+    &__inner {
+        @include layout();
+    }
+
+    &--medium {
+        background: $color_primary_900;
+
+        .button:not(.button--2):not(.button--3) {
+            @include button-tertiary();
+        }
+    }
+
+    &--light {
+        & + .module--light {
+            padding-top: 0;
+        }
+    }
+
+    &--dark {
+        --color-title: var(--color-text-negative);
+        
+        background-color: var(--module-color-background);
+        background-image: var(--module-gradient-background);
+        
+        color: $color_1;    
+
+        .badge {
+            @include badge-dark();
+        }
+
+        .button:not(.button--2):not(.button--3) {
+            @include button-secondary();
+        }
+    }
+}

@@ -1,0 +1,28 @@
+//----------------------------------------//
+//                                        //
+//  Badge stylesheet                      //
+//                                        //
+//----------------------------------------//
+
+@mixin badge-light() {
+    background: $color_primary_900;
+    color: $color_primary_500;
+}
+
+@mixin badge-dark() {
+    background: $color_primary_700;
+    color: $color_1;
+}
+
+.badge {
+    @include text--badge;
+    @include badge-light;
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: $badge_corner;
+    margin: 0 0 .5rem 0;
+
+    &--2 {
+        @include badge-dark;
+    }
+}

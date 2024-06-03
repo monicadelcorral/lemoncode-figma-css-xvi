@@ -1,0 +1,73 @@
+//----------------------------------------//
+//                                        //
+//  Content image module stylesheet       //
+//                                        //
+//----------------------------------------//
+
+.module--content-image {}
+
+
+.content-image {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__body {
+        width: 50%;
+        max-width: 520px;
+        padding-right: 3rem;
+
+        &__title {
+            @include text-hierarchy--2();
+
+            & + .button {
+                margin-top: 2rem;
+            }
+            
+        }
+
+        &__content {
+            @include text-hierarchy--5;
+            margin-bottom: 3rem;
+
+            p {
+                margin: 0 0 .5rem 0;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__media {
+        width: 50%;
+        padding-left: 3rem;
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &.content-image--reversed & {
+        &__inner {
+            flex-direction: row-reverse
+        }
+
+        &__body {
+            padding-left: 3rem;
+            padding-right: 0
+        }
+        &__media {
+            padding-left: 0;
+            padding-right: 3rem;
+        }
+    }
+
+}

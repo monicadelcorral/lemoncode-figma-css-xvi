@@ -1,0 +1,30 @@
+mixin content-image(title, text, button, badge, img, backgroundDark, reversed)
+  - title = (typeof title !== 'undefined') ? title : "Lorem ipsum dolor est"
+  - text = (typeof text !== 'undefined') ? text : "Fusce maximus sem et nisl vehicula fermentum. Praesent tempor enim sed lobortis laoreet. Nam a justo placerat, elementum purus ut, facilisis nunc. "
+  - button = (typeof button !== 'undefined') ? button : false;
+  - badge = (typeof badge !== 'undefined') ? badge : false;
+  - img = (typeof img !== 'undefined') ? img : "_assets/illustration-1.svg";
+  - backgroundDark = (typeof backgroundDark !== 'undefined') ? backgroundDark : false;
+  - reversed = (typeof reversed !== 'undefined') ? reversed : false;
+  
+  section.module.module--content-image(class=(backgroundDark) ? 'module--dark' : 'module--light')
+    .module__inner
+        header.module__header   
+        .module__body
+            .module__body__inner 
+
+                .content-image(class=(reversed) ? 'content-image--reversed' : '')
+                    .content-image__inner 
+                        .content-image__body
+                            if (badge)
+                                span.badge
+                                    span.badge__text #{badge}
+                            h1.content-image__body__title #{title}
+                            .content-image__body__content 
+                                p #{text}
+                            if (button)
+                                a(href="#").button
+                                    span.button__text #{button}
+                        .content-image__media 
+                            img(src=img)
+        footer.module__footer 

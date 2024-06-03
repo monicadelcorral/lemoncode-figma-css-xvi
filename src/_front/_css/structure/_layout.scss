@@ -1,0 +1,25 @@
+//----------------------------------------//
+//                                        //
+//  Layout stylesheet                     //
+//                                        //
+//----------------------------------------//
+
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: common-ligatures;
+    margin: 0;
+    padding: 0;
+    background: var(--color-body-background);
+  
+    @include text--body();
+}
+
+/*
+@media (max-width: 1000px) {
+    html {
+        font-size: 75%;
+    }
+}*/

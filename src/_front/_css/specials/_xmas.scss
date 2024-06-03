@@ -1,0 +1,20 @@
+body {
+    &.force-xmas {
+        --color-body-background : #025103;
+        --color-body-text : #ffffff;
+        --color-title : #C3984D;
+
+
+        --module-color-background: var(--color-body-background);
+        --module-gradient-background: none;
+
+        .module--dark {
+            --color-title : #C3984D;
+        }
+
+        .button {
+            --button-color-background : #9E0000;
+            --button-color-text : #ffffff;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+//----------------------------------------//
+//                                        //
+//  Button stylesheet                     //
+//                                        //
+//----------------------------------------//
+
+@mixin button-reset() {
+    max-width: 100%;
+    border-radius: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    transition-property: color, background-color, background-position, border-color, box-shadow, opacity, height;
+    transition-duration: .4s;
+    transition-timing-function: ease-in;
+    -webkit-appearance: none;
+    cursor: pointer;
+    text-decoration: none;
+  
+    &.disabled, &[disabled] {
+      cursor: default;
+    }
+
+    input {
+      border: 0;
+      padding: 0;
+      margin: 0;
+      background: transparent;
+      white-space: normal;
+    }
+}
+
+
+@mixin button-colors() {
+    background: var(--button-color-background);
+    color: var(--button-color-text);
+
+    &:not([disabled]):not(.disabled):hover {
+      --button-color-background : var(--button-hover-color-background);
+      --button-color-text : var(--button-hover-color-text);
+    }
+}
+
+@mixin button-secondary() {
+    --button-color-background : var(--button-secondary-color-background);
+    --button-color-text : var(--button-secondary-color-text);
+}
+
+@mixin button-tertiary() {
+  --button-color-background : var(--button-tertiary-color-background);
+  --button-color-text : var(--button-tertiary-color-text);
+}
+
+
+.button {
+    @include button-reset();
+    @include button-colors();
+    //padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
+    margin: 0 0 .5rem 0;
+    border-radius: $button_corner;
+
+    &.button--2 {
+      @include button-secondary();  
+    }
+
+    &.button--3 {
+      @include button-tertiary();
+    }
+}
