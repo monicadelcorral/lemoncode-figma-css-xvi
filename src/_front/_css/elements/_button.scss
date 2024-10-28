@@ -15,6 +15,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     position: relative;
     background: transparent;
     transition-property: color, background-color, background-position, border-color, box-shadow, opacity, height;
@@ -67,11 +68,27 @@
     margin: 0 0 .5rem 0;
     border-radius: $button_corner;
 
+  &.button--icon {
+    .button__text {
+      @include screen-reader-text();
+    }
+  }
+
     &.button--2 {
       @include button-secondary();  
     }
 
     &.button--3 {
       @include button-tertiary();
+    }
+
+    .button__icon {
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      
+      &.button__icon--img {
+        background-image: url(../_gfx/background-illustration.svg);
+      }
     }
 }

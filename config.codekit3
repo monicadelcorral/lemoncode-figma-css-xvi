@@ -4,7 +4,7 @@
     {
       "name" : "Process All Remaining Files and Folders",
       "stepType" : 1,
-      "uuidString" : "0AF6EAAE-B659-44DB-A85E-244E724F5D56"
+      "uuidString" : "BDC882C4-6DDF-4E18-A83C-1BCB47DDD77F"
     }
   ],
   "creatorBuild" : "34434",
@@ -41,65 +41,6 @@
       "pME" : 1,
       "rFN" : 0,
       "uCM" : 0
-    },
-    "\/src\/_assets\/hero-2.png" : {
-      "ft" : 32768,
-      "iS" : 544994,
-      "oA" : 2,
-      "oAP" : "\/build\/_assets\/hero-2.png",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/src\/_assets\/hero-above.png" : {
-      "ft" : 32768,
-      "iS" : 490955,
-      "oA" : 0,
-      "oAP" : "\/build\/_assets\/hero-above.png",
-      "oF" : 0,
-      "oIPL" : 0,
-      "opt" : 1,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/src\/_assets\/hero.png" : {
-      "ft" : 32768,
-      "iS" : 544994,
-      "oA" : 2,
-      "oAP" : "\/build\/_assets\/hero.png",
-      "oF" : 1,
-      "oIPL" : 0,
-      "opt" : 0,
-      "oT" : 1,
-      "ou" : "lpckwebp-none",
-      "q" : 100,
-      "rq" : 75
-    },
-    "\/src\/_assets\/illustration-1.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/_assets\/illustration-1.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
-    },
-    "\/src\/_assets\/illustration-2.svg" : {
-      "ft" : 2097152,
-      "miP" : 0,
-      "oA" : 2,
-      "oAP" : "\/build\/_assets\/illustration-2.svg",
-      "oF" : 0,
-      "opt" : 0,
-      "plM" : 52780316221407,
-      "prP" : 0
     },
     "\/src\/_front\/_css\/commons\/_config.scss" : {
       "aP" : 0,
@@ -216,7 +157,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/build\/_front\/_css\/main.css",
-      "oF" : 0,
+      "oF" : 1,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -246,7 +187,7 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/build\/_front\/_css\/modules\/_hero.css",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 0,
       "pg" : 0,
       "sct" : 0
@@ -416,7 +357,7 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/build\/_html\/_structure\/foot.html",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 1
     },
     "\/src\/_html\/_structure\/footer.pug" : {
@@ -426,7 +367,7 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/build\/_html\/_structure\/footer.html",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 1
     },
     "\/src\/_html\/_structure\/head.pug" : {
@@ -436,7 +377,7 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/build\/_html\/_structure\/head.html",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 1
     },
     "\/src\/_html\/_structure\/header.pug" : {
@@ -446,8 +387,67 @@
       "hM" : 0,
       "oA" : 1,
       "oAP" : "\/build\/_html\/_structure\/header.html",
-      "oF" : 1,
+      "oF" : 0,
       "oS" : 1
+    },
+    "\/src\/_media\/hero-2.png" : {
+      "ft" : 32768,
+      "iS" : 544994,
+      "oA" : 0,
+      "oAP" : "\/build\/_media\/hero-2.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/src\/_media\/hero-above.png" : {
+      "ft" : 32768,
+      "iS" : 173153,
+      "oA" : 0,
+      "oAP" : "\/build\/_media\/hero-above.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/src\/_media\/hero.png" : {
+      "ft" : 32768,
+      "iS" : 174817,
+      "oA" : 0,
+      "oAP" : "\/build\/_media\/hero.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 1,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/src\/_media\/illustration-1.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/_media\/illustration-1.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/src\/_media\/illustration-2.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/build\/_media\/illustration-2.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/src\/index.pug" : {
       "cB" : 0,
@@ -457,7 +457,7 @@
       "oA" : 0,
       "oAP" : "\/build\/index.html",
       "oF" : 0,
-      "oS" : 0
+      "oS" : 1
     }
   },
   "hooks" : [
@@ -468,11 +468,11 @@
   },
   "projectAttributes" : {
     "creationDate" : 675764760.47047198,
-    "displayValue" : "lemoncode-figma-css-xvi",
+    "displayValue" : "lemoncode-figma-css-xvii",
     "displayValueWasSetByUser" : 0,
     "iconImageName" : "brackets-brick",
     "iconImageWasSetByUser" : 0,
-    "lastBuiltDate" : 738860788.84327996
+    "lastBuiltDate" : 751575870.590698
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,

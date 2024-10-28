@@ -344,20 +344,16 @@ $fonts_path : '../_fonts/';
 
 
 @font-face{
-  font-family:'Example';
-  src: url($fonts_path+'Example-Rg.eot?#iefix');
-  src: url($fonts_path+'Example-Rg.eot?#iefix') format('eot'),
-       url($fonts_path+'Example-Rg.woff2') format('woff2'),
-       url($fonts_path+'Example-Rg.woff') format('woff'),
-       url($fonts_path+'Example-Rg.ttf') format('truetype'),
-       url($fonts_path+'Example-Rg.svg#d40bd713-759d-489d-b33e-fe369328171f') format('svg');
-  font-weight: 400;
+  font-family:'Roboto';
+  src: url($fonts_path+'Example-Rg.woff2') format('woff2'),
+       url($fonts_path+'Example-Rg.woff') format('woff'),;
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face{
-  font-family:'Example';
+  font-family:'Roboto';
   src: url($fonts_path+'Example-It.eot?#iefix');
   src: url($fonts_path+'Example-It.eot?#iefix') format('eot'),
        url($fonts_path+'Example-It.woff2') format('woff2'),
@@ -368,7 +364,6 @@ $fonts_path : '../_fonts/';
   font-style: italic;
   font-display: swap;
 }
-
 */
 .title--1 {
   font-weight: 900;
@@ -419,6 +414,7 @@ $fonts_path : '../_fonts/';
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   position: relative;
   background: transparent;
   transition-property: color, background-color, background-position, border-color, box-shadow, opacity, height;
@@ -447,6 +443,18 @@ $fonts_path : '../_fonts/';
   --button-color-background: var(--button-hover-color-background);
   --button-color-text: var(--button-hover-color-text);
 }
+.button.button--icon .button__text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important;
+}
 .button.button--2 {
   --button-color-background: var(--button-secondary-color-background);
   --button-color-text: var(--button-secondary-color-text);
@@ -454,6 +462,14 @@ $fonts_path : '../_fonts/';
 .button.button--3 {
   --button-color-background: var(--button-tertiary-color-background);
   --button-color-text: var(--button-tertiary-color-text);
+}
+.button .button__icon {
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+}
+.button .button__icon.button__icon--img {
+  background-image: url(../_gfx/background-illustration.svg);
 }
 
 .badge {
